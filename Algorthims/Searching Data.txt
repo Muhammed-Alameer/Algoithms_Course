@@ -1,0 +1,111 @@
+"""
+The searching algorithms are used to search or find one or more than one element from a dataset. These type of algorithms are used to find elements from a specific data structures.
+
+1.Unordered list search :
+Find a Minecraft item by name or ID. If querying an item by ID, the search can also specify item style.
+
+Arguments
+name: Character string with the name of a Minecraft item (specify either name or id, not both)
+id: A numeric or character string with the ID of a Minecraft item (specify either name or id, not both)
+style: A numeric or character string with the style of a Minecraft item (use this argument only if querying by id is provided)
+"""
+
+# searching for an item in an unordered list
+# sometimes called a Linear search
+
+# declare a list of values to operate on
+items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
+
+def find_item(item, itemlist):
+    for i in range(0, len(itemlist)):
+        if item == itemlist[i]:
+            return i
+    
+    return None
+
+
+print(find_item(87, items))
+print(find_item(250, items))
+
+
+#Unordered list search
+
+# searching for an item in an ordered list
+# this technique uses a binary search
+
+
+items = [6, 8, 19, 20, 23, 41, 49, 53, 56, 87]
+
+def binarysearch(item, itemlist):
+    # get the list size
+    listsize = len(itemlist) - 1
+    # start at the two ends of the list
+    lowerIdx = 0
+    upperIdx = listsize
+
+    while lowerIdx <= upperIdx:
+        # calculate the middle point
+        midPt = (lowerIdx + upperIdx)// 2
+
+        # if item is found, return the index
+        if itemlist[midPt] == item:
+            return midPt
+        # otherwise get the next midpoint
+        if item > itemlist[midPt]:
+            lowerIdx = midPt + 1
+        else:
+            upperIdx = midPt - 1
+
+    if lowerIdx > upperIdx:
+        return None
+
+
+print(binarysearch(23, items))
+print(binarysearch(87, items))
+print(binarysearch(250, items))
+
+
+#Is sorted list
+
+# determine if a list is sorted
+
+
+items1 = [6, 8, 19, 20, 23, 41, 49, 53, 56, 87]
+items2 = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
+
+def is_sorted(itemlist):
+    # using the all function
+    return all(itemlist[i] <= itemlist[i+1] for i in range(len(itemlist)-1))
+
+    # using the brute force method
+    # for i in range(0, len(itemlist)-1):
+    #     if (itemlist[i] > itemlist[i+1]):
+    #         return False
+    # return True
+
+print(is_sorted(items1))
+print(is_sorted(items2))
+
+
+
+
+# to check if list is sorted
+# using sorted()
+  
+# initializing list
+test_list = [1, 4, 5, 8, 10]
+  
+# printing original list 
+print ("Original list : " + str(test_list))
+  
+# using sorted() to 
+# check sorted list 
+flag = 0
+if(test_list == sorted(test_list)):
+    flag = 1
+      
+# printing result
+if (flag) :
+    print ("Yes, List is sorted.")
+else :
+    print ("No, List is not sorted.")
