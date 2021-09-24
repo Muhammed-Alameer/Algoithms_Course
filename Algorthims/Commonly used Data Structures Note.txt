@@ -1,5 +1,6 @@
 """
-Data structure is a container that stores data in a specific layout. This “layout” allows a data structure to be efficient in some operations and inefficient in others. Your goal is to understand data structures so that you can pick the data structure that’s most optimal for the problem at hand.
+Data structure is a container that stores data in a specific layout. This “layout” allows a data structure to be efficient in some operations and inefficient in others. 
+Your goal is to understand data structures so that you can pick the data structure that’s most optimal for the problem at hand.
 the most commonly used data structures:
 -Arrays
 -Stacks
@@ -8,7 +9,8 @@ the most commonly used data structures:
 -Hash Tables
 
 1. Arrays
-One of the simplest data structures, an array is a collection of items that are stored sequentially. An array contains values or variables—known as “elements”—of the same data type and is of a fixed size, so you cannot change the size of an array. Each item in an array is indexed starting with 0.
+One of the simplest data structures, an array is a collection of items that are stored sequentially. An array contains values or variables—known as “elements”—of the same
+data type and is of a fixed size, so you cannot change the size of an array. Each item in an array is indexed starting with 0.
 
 The best way to think about an array is like a weekly medication organizer. It includes small containers lined up in a sequence, and each container has elements inside.
 
@@ -17,34 +19,45 @@ Arrays are commonly used as structures for building other, more complicated data
 2. Stacks
 A stack works almost exactly as it sounds. It’s like stacking elements within a tall container.
 
-Stacks are known as LIFO (Last In First Out) structures. This means the element placed last can be accessed first. You can “push” a new element onto the top of the stack, or you can “pop,” deleting the element inserted last which is at the top of the stack.
+Stacks are known as LIFO (Last In First Out) structures. This means the element placed last can be accessed first. You can “push” a new element onto the top of the stack,
+or you can “pop,” deleting the element inserted last which is at the top of the stack.
 
 Stacks are commonly used for parsing and evaluating mathematical expressions and to implement function calls in recursion programming.
  
 
 3. Queues
-A queue functions similarly to a stack, but instead of being a LIFO structure, it is a FIFO (First In First Out) structure. The easiest way to think about a queue is to think of a line of people waiting to enter a building. The person at the beginning of the line will enter the building first, while the person at the end will enter last.
+A queue functions similarly to a stack, but instead of being a LIFO structure, it is a FIFO (First In First Out) structure.
+The easiest way to think about a queue is to think of a line of people waiting to enter a building. The person at the beginning of the line will enter the building first, 
+while the person at the end will enter last.
 
-You can enqueue an element in this structure, which means inserting the element to the end of the queue. You can also dequeue an element, which means deleting an element from the beginning of the queue.
+You can enqueue an element in this structure, which means inserting the element to the end of the queue. You can also dequeue an element,
+which means deleting an element from the beginning of the queue.
 
 Queues are often used to manage threads in multithreading, and they are (not surprisingly) used to implement priority queuing systems.
 
 
 4. Linked Lists
-A linked list is a sequence of items arranged in a linear order all connected to each other. This means you must access data in order, so random access to data is not possible.
+A linked list is a sequence of items arranged in a linear order all connected to each other. This means you must access data in order,
+so random access to data is not possible.
 
-Each element in a linked list is called a “node,” and each node contains a key and a pointer. The pointer directs you to the next node, called a “next.” The sequence starts with a “head,” which directs you to the first element within the list. The last element of this list is known as the “tail.”
+Each element in a linked list is called a “node,” and each node contains a key and a pointer. The pointer directs you to the next node,
+called a “next.” The sequence starts with a “head,” which directs you to the first element within the list. The last element of this list is known as the “tail.”
 
-You can create a singly linked list, which lets you traverse each item in a forward direction from the head to the tail. Similarly, you can create a doubly-linked list, which can be traversed both forward and backward. And finally, you can create a circular linked list in which the next pointer of the tail points to the head and vice versa, forming a circle.
+You can create a singly linked list, which lets you traverse each item in a forward direction from the head to the tail. Similarly, you can create a doubly-linked list,
+which can be traversed both forward and backward. And finally, you can create a circular linked list in which the next pointer of the tail points to the head and vice versa,
+forming a circle.
 
 Linked lists are used for symbol table management in switching between programs using Alt + Tab (On a PC).
  
 
 5. Hash Tables
-A hash table structure associates each value with a key and then stores them. This makes it easy to look up values efficiently using a key. It’s an efficient way to insert and search for data regardless of its size, as it makes it easy to identify a specific object from a group of similar objects.
+A hash table structure associates each value with a key and then stores them. This makes it easy to look up values efficiently using a key.
+It’s an efficient way to insert and search for data regardless of its size, as it makes it easy to identify a specific object from a group of similar objects.
 
-For example, if you go to college, you may be assigned a unique student ID number. This ID number is a key that can be used to retrieve information about you and your student record.
+For example, if you go to college, you may be assigned a unique student ID number.
+This ID number is a key that can be used to retrieve information about you and your student record.
 
-A hash table uses what’s known as a “hash function” to map a data set of any size to one of a fixed size—the hash table. The values that a hash function returns are known as “hash values.”  
+A hash table uses what’s known as a “hash function” to map a data set of any size to one of a fixed size—the hash table.
+The values that a hash function returns are known as “hash values.”  
 
 Hash tables are commonly used to create database indexes, to create associative arrays and to create a “set.”
